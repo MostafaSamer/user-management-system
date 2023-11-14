@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 interface LoginModel {
-  email: string;
+  username: string;
   password: string;
 }
 
@@ -12,7 +12,7 @@ interface LoginModel {
 })
 export class LoginComponent {
   model: LoginModel = {
-    email: '',
+    username: '',
     password: ''
   };
   
