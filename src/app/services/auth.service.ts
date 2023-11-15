@@ -13,10 +13,10 @@ export class AuthService {
 
   login(username: string, password: string): Observable<boolean> {
     if (username === AuthService.ADMIN_CREDENTIALS.username && password === AuthService.ADMIN_CREDENTIALS.password) {
-      this.loggedInUser = { username, role: 0 };
+      this.loggedInUser = { username, name: "admin", email: "admin@email.com", role: 0 };
       return of(true);
     } else if (username === AuthService.USER_CREDENTIALS.username && password === AuthService.USER_CREDENTIALS.password) {
-      this.loggedInUser = { username, role: 1 };
+      this.loggedInUser = { username, name: "user", email: "user@email.com", role: 1 };
       return of(true);
     } else {
       this.loggedInUser = null;

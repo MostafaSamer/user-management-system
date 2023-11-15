@@ -13,6 +13,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AdminComponent } from './views/admin/admin.component';
 import { UserComponent } from './views/user/user.component';
+import { UsersComponent } from './components/users/users.component';
+import { AddUserComponent } from './components/add-user/add-user.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -25,7 +27,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     HeaderComponent,
     AdminComponent,
-    UserComponent
+    UserComponent,
+    UsersComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
