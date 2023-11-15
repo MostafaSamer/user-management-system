@@ -1,2 +1,7 @@
 <app-header></app-header>
-<p>home works!</p>
+<div *ngIf="getLoggedInUserRole() === 0">
+    <app-admin></app-admin>
+</div>
+<div *ngIf="getLoggedInUserRole() === 1">
+    <app-user></app-user>
+</div>
