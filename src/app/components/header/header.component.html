@@ -1,11 +1,11 @@
 <!-- header.component.html -->
 <div class="header">
     <div class="logo">
-      <button routerLink="/">Home</button>
+      <button routerLink="/">{{ 'HOME' | translate }}</button>
     </div>
     <div class="buttons">
-      <button (click)="switchLanguage()">Switch Language</button>
-      <button (click)="logout()">Logout</button>
+      <button (click)="switchLanguage()">{{ 'SWITCH_LANAGUAGE' | translate }}</button>
+      <button (click)="logout()">{{ 'LOGOUT' | translate }}</button>
     </div>
   </div>
   

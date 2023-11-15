@@ -3,7 +3,10 @@
 @import 'assets/styles/forms';
 
 body {
-    font-family: 'Roboto', sans-serif;
     background-color: $background-color;
     margin: 0;
+}
+
+body, button {
+    font-family: 'Roboto', sans-serif !important;
 }
