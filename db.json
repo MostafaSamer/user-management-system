@@ -1,28 +1,35 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "username": "admin",
-        "name": "Mostafa Samir",
-        "email": "admin@email.com",
-        "password": "1234",
-        "role": 0
-      },
-      {
-        "id": 2,
-        "username": "user1",
-        "name": "Youssef Amir",
-        "email": "amir@email.com",
-        "password": "1234",
-        "role": 1
-      },
-      {
-        "id": 2,
-        "username": "user2",
-        "name": "Moatasem",
-        "email": "moa@email.com",
-        "password": "1234",
-        "role": 1
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "name": "Mostafa Samir",
+      "email": "admin@email.com",
+      "password": "1234",
+      "role": 0
+    },
+    {
+      "id": 2,
+      "username": "user1",
+      "name": "Youssef Amir",
+      "email": "amir@email.com",
+      "password": "1234",
+      "role": 1
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "name": "Moatasem",
+      "email": "moa@email.com",
+      "password": "1234",
+      "role": 1
+    },
+    {
+      "username": "addform",
+      "email": "form@email.com",
+      "name": "add form",
+      "role": "1",
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="form-container">
+        <div class="add-user-form">
+            <h2>Add New User</h2>
+            <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" formControlName="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" formControlName="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" formControlName="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Role:</label>
+                    <!-- <input type="text" id="role" name="role" formControlName="role" required> -->
+                    <select id="role" name="role" formControlName="role" required>
+                        <option value="1">User</option>
+                        <option value="0">Admin</option>
+                    </select>
+                </div>
+                <button type="submit">Add User</button>
+            </form>
+        </div>
+    </div>
+</div>
