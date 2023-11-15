@@ -26,4 +26,8 @@ export class AuthService {
   getLoggedInUser(): { username: string, role: string } | null {
     return this.loggedInUser;
   }
+
+  logout() {
+    this.loggedInUser = null;
+  }
 }
