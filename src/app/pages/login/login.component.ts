@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 interface LoginModel {
   username: string;
@@ -11,14 +14,25 @@ interface LoginModel {
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  model: LoginModel = {
-    username: '',
-    password: ''
-  };
+  loginForm!: FormGroup;
+
+  constructor(
+    private authService: AuthService,
+    private fb: FormBuilder,
+    private router: Router
+  ) {
+    this.loginForm = this.fb.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required]
+    });
+  }
   
   onSubmit() {
-    // Handle form submission logic here
-    console.log('Form submitted:', this.model);
+    if (this.loginForm?.invalid) return;
+    const { username, password } = this.loginForm.value;
+      this.authService.login(username, password).subscribe((res) => {
+        this.router.navigate(['/']);
+      });
   }
 
 }
