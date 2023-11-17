@@ -6,7 +6,7 @@
         <div><strong>Role:</strong> {{ user.role === 1 ? 'User' : 'Admin' }}</div>
         <div class="user-options">
             <button (click)="editUser(user)">Edit</button>
-            <button (click)="deleteUser(user)">Delete</button>
+            <button (click)="confirmDeleteUser(user)">Delete</button>
         </div>
     </div>
 </div>

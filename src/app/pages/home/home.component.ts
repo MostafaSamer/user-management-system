@@ -16,14 +16,14 @@ export class HomeComponent {
     private authService: AuthService,
     private router: Router
   ) {
-    const checkUser = this.authService.getLoggedInUser();
-    if(checkUser) this.user = checkUser;
-    else this.router.navigate(['/login']);
+    // const checkUser = this.authService.getLoggedInUser();
+    // if(checkUser) this.user = checkUser;
+    // else this.router.navigate(['/login']);
 
   }
 
-  getLoggedInUserRole() {
-    return this.user.role
-  }
+  // getLoggedInUserRole() {
+  //   return this.user.role
+  // }
 
 }

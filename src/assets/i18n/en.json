@@ -1,5 +1,9 @@
 {
   "HOME": "Home",
   "LOGOUT": "Logout",
-  "SWITCH_LANAGUAGE": "Switch Language"
+  "SWITCH_LANAGUAGE": "Switch Language",
+  "DELETE_USER_TITLE": "Delete User",
+  "DELETE_USER_TEXT": "Are you sure you want to delete '{{ username }}'?",
+  "CANCEL": "Cancel",
+  "DELETE": "Delete"
 }

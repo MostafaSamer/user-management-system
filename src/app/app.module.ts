@@ -5,6 +5,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +19,7 @@ import { AddUserFormComponent } from './components/add-user-form/add-user-form.c
 import { UserHomeComponent } from './views/user-home/user-home.component';
 import { AdminHomeComponent } from './views/admin-home/admin-home.component';
 import { CtaButtonComponent } from './components/cta-button/cta-button.component';
+import { DeleteUserModalComponent } from './components/modal/delete-user-modal/delete-user-modal.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -33,7 +36,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AddUserFormComponent,
     UserHomeComponent,
     AdminHomeComponent,
-    CtaButtonComponent
+    CtaButtonComponent,
+    DeleteUserModalComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,9 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    AppRoutingModule
+    MatDialogModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

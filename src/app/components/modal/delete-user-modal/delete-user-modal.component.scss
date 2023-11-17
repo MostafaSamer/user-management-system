@@ -1,0 +1,23 @@
+.mat-dialog-title {
+    color: #032F61;
+    font-size: 1.5em;
+}
+
+.mat-dialog-content {
+    color: #333;
+}
+
+.mat-dialog-actions {
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.mat-dialog-actions button {
+    margin-left: 10px;
+    background-color: #E6007E;
+    color: #fff;
+}
+
+.mat-dialog-actions button:hover {
+    background-color: #032F61;
+}
