@@ -20,6 +20,8 @@ import { UserHomeComponent } from './views/user-home/user-home.component';
 import { AdminHomeComponent } from './views/admin-home/admin-home.component';
 import { CtaButtonComponent } from './components/cta-button/cta-button.component';
 import { DeleteUserModalComponent } from './components/modal/delete-user-modal/delete-user-modal.component';
+import { EditUserFormComponent } from './components/edit-user-form/edit-user-form.component';
+import { EditUserComponent } from './pages/edit-user/edit-user.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,7 +39,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     UserHomeComponent,
     AdminHomeComponent,
     CtaButtonComponent,
-    DeleteUserModalComponent
+    DeleteUserModalComponent,
+    EditUserFormComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,

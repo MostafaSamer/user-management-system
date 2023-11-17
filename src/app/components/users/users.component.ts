@@ -3,6 +3,7 @@ import { User } from 'src/app/interfaces/User';
 import { UserService } from 'src/app/services/user.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteUserModalComponent } from '../modal/delete-user-modal/delete-user-modal.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -14,7 +15,8 @@ export class UsersComponent implements OnInit {
 
   constructor(
     private userServices: UserService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -22,7 +24,7 @@ export class UsersComponent implements OnInit {
   }
 
   editUser(user: User) {
-    console.log("Navigate to edit user page with this user id: ", user.id)
+    this.router.navigate(['/edit-user', user.id])
   }
   deleteUser(user: User) {
     this.userServices

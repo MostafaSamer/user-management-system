@@ -23,6 +23,11 @@ export class UserService {
     return this.http.get<User[]>(this.apiUrl);
   }
 
+  getUser(id: string): Observable<User> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<User>(url);
+  }
+
   addUser(user: User): Observable<User> {
     return this.http.post<User>(this.apiUrl, user, httpOption);
   }
@@ -30,5 +35,10 @@ export class UserService {
   deleteUser(user: User): Observable<User> {
     const url = `${this.apiUrl}/${user.id}`;
     return this.http.delete<User>(url);
+  }
+
+  editUser(id:string, user: User): Observable<User> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.put<User>(url, user);
   }
 }

@@ -1,8 +1,8 @@
 <div class="container">
     <div class="form-container">
-        <div class="add-user-form">
-            <h2>Add New User</h2>
-            <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+        <div class="edit-user-form">
+            <h2>Edit New User</h2>
+            <form [formGroup]="editUserForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" formControlName="username" required>
@@ -22,7 +22,7 @@
                         <option value="0">Admin</option>
                     </select>
                 </div>
-                <button type="submit">Add User</button>
+                <button type="submit">Edit User</button>
             </form>
         </div>
     </div>
