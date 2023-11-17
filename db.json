@@ -9,12 +9,11 @@
       "role": 0
     },
     {
-      "id": 2,
       "username": "user1",
-      "name": "Youssef Amir",
       "email": "amir@email.com",
-      "password": "1234",
-      "role": 1
+      "name": "Youssef Amir",
+      "role": "1",
+      "id": 2
     },
     {
       "username": "addfs",

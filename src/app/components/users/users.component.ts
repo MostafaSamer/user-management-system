@@ -23,9 +23,14 @@ export class UsersComponent implements OnInit {
     this.userService.getUsers().subscribe((users) => this.users = users)
   }
 
+  ViewAs(user: User) {
+    this.router.navigate(['/view-as', user.id])
+  }
+
   editUser(user: User) {
     this.router.navigate(['/edit-user', user.id])
   }
+
   deleteUser(user: User) {
     this.userService
     .deleteUser(user)

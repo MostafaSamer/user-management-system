@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/interfaces/User';
 import { AuthService } from 'src/app/services/auth.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-user-home',
@@ -13,14 +14,28 @@ export class UserHomeComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private userService: UserService,
+    private router: Router,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
-    this.user = this.authService.getLoggedInUser();
+    const userId = this.route.snapshot.paramMap.get('id');
+    if (userId) {
+      this.userService.getUser(userId).subscribe(
+        (user: User) => {
+          this.user = user;
+        },
+        (error) => {
+          console.error('An error occurred while fetching user data: ', error);
+        }
+      );
+    } else {
+      this.user = this.authService.getLoggedInUser();
+    }
   }
 
   editUser() {
-    this.router.navigate(['/edit-profile'])
+    this.router.navigate(['/edit-profile']);
   }
 }
