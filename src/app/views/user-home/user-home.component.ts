@@ -21,6 +21,6 @@ export class UserHomeComponent implements OnInit {
   }
 
   editUser() {
-    // this.router.navigate(['/edit-profile'])
+    this.router.navigate(['/edit-profile'])
   }
 }

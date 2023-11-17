@@ -14,20 +14,20 @@ export class UsersComponent implements OnInit {
   users: User[] = [];
 
   constructor(
-    private userServices: UserService,
+    private userService: UserService,
     private dialog: MatDialog,
     private router: Router
   ) {}
 
   ngOnInit(): void {
-    this.userServices.getUsers().subscribe((users) => this.users = users)
+    this.userService.getUsers().subscribe((users) => this.users = users)
   }
 
   editUser(user: User) {
     this.router.navigate(['/edit-user', user.id])
   }
   deleteUser(user: User) {
-    this.userServices
+    this.userService
     .deleteUser(user)
     .subscribe(() => (this.users = this.users.filter(u => u.id !== user.id)))
   }

@@ -22,6 +22,7 @@ import { CtaButtonComponent } from './components/cta-button/cta-button.component
 import { DeleteUserModalComponent } from './components/modal/delete-user-modal/delete-user-modal.component';
 import { EditUserFormComponent } from './components/edit-user-form/edit-user-form.component';
 import { EditUserComponent } from './pages/edit-user/edit-user.component';
+import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -41,7 +42,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     CtaButtonComponent,
     DeleteUserModalComponent,
     EditUserFormComponent,
-    EditUserComponent
+    EditUserComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,

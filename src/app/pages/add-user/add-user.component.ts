@@ -11,12 +11,12 @@ import { UserService } from 'src/app/services/user.service';
 export class AddUserComponent {
 
   constructor(
-    private userServices: UserService,
+    private userService: UserService,
     private router: Router
   ) {}
 
   addUser(user: User) {
-    this.userServices.addUser(user)
+    this.userService.addUser(user)
     .subscribe(
       (user) => this.router.navigate(['/']),
       (error) => {

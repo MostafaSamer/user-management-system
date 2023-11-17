@@ -13,7 +13,7 @@ export class EditUserComponent implements OnInit {
   user: User | undefined;
 
   constructor(
-    private userServices: UserService,
+    private userService: UserService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
@@ -24,7 +24,7 @@ export class EditUserComponent implements OnInit {
   }
 
   fetchUserData(id: string) {
-    this.userServices.getUser(id)
+    this.userService.getUser(id)
     .subscribe(
       (user) => this.user = user,
       (error) => {
@@ -34,7 +34,7 @@ export class EditUserComponent implements OnInit {
   }
 
   editUser(user: User) {
-    this.userServices.editUser(this.userId, user)
+    this.userService.editUser(this.userId, user)
     .subscribe(
       (user) => this.router.navigate(['/']),
       (error) => {
