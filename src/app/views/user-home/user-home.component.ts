@@ -11,6 +11,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UserHomeComponent implements OnInit {
   user!: User;
+  viewAs: boolean = false;
 
   constructor(
     private authService: AuthService,
@@ -22,6 +23,7 @@ export class UserHomeComponent implements OnInit {
   ngOnInit() {
     const userId = this.route.snapshot.paramMap.get('id');
     if (userId) {
+      this.viewAs = true;
       this.userService.getUser(userId).subscribe(
         (user: User) => {
           this.user = user;
@@ -36,6 +38,7 @@ export class UserHomeComponent implements OnInit {
   }
 
   editUser() {
+    this.viewAs ? this.router.navigate(['/edit-user', this.user.id]) :
     this.router.navigate(['/edit-profile']);
   }
 }
