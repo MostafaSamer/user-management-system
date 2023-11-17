@@ -17,19 +17,32 @@
       "role": 1
     },
     {
-      "id": 2,
-      "username": "user2",
-      "name": "Moatasem",
-      "email": "moa@email.com",
-      "password": "1234",
-      "role": 1
-    },
-    {
       "username": "addform",
       "email": "form@email.com",
       "name": "add form",
       "role": "1",
       "id": 3
+    },
+    {
+      "username": "shockwave",
+      "email": "hojimeg111@geekjun.com",
+      "name": "Mostafa Samir",
+      "role": "1",
+      "id": 4
+    },
+    {
+      "username": "shockwave2",
+      "email": "hojimeg111@geekjun.com",
+      "name": "Mostafa Samir",
+      "role": "1",
+      "id": 5
+    },
+    {
+      "username": "user11",
+      "email": "hojimeg111@geekjun.com",
+      "name": "Mostafa Samir",
+      "role": "1",
+      "id": 6
     }
   ]
 }

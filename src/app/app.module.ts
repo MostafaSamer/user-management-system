@@ -12,10 +12,11 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AddUserComponent } from './pages/add-user/add-user.component';
 import { HeaderComponent } from './components/header/header.component';
-import { AdminComponent } from './views/admin/admin.component';
-import { UserComponent } from './views/user/user.component';
 import { UsersComponent } from './components/users/users.component';
 import { AddUserFormComponent } from './components/add-user-form/add-user-form.component';
+import { UserHomeComponent } from './views/user-home/user-home.component';
+import { AdminHomeComponent } from './views/admin-home/admin-home.component';
+import { CtaButtonComponent } from './components/cta-button/cta-button.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -28,10 +29,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     AddUserComponent,
     HeaderComponent,
-    AdminComponent,
-    UserComponent,
     UsersComponent,
-    AddUserFormComponent
+    AddUserFormComponent,
+    UserHomeComponent,
+    AdminHomeComponent,
+    CtaButtonComponent
   ],
   imports: [
     BrowserModule,

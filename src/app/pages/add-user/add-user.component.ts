@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/interfaces/User';
 import { UserService } from 'src/app/services/user.service';
 
@@ -10,15 +11,21 @@ import { UserService } from 'src/app/services/user.service';
 export class AddUserComponent {
 
   constructor(
-    private userServices: UserService
+    private userServices: UserService,
+    private router: Router
   ) {}
 
   addUser(user: User) {
     this.userServices.addUser(user)
-    .subscribe((user) => console.log(user))
+    .subscribe(
+      (user) => this.router.navigate(['/']),
+      (error) => {
+        console.error('An error occurred during adding user: ', error);
+        // this.errorMessage = 'An unexpected error occurred.';
+      }
+    )
   }
 
   // TODO: Add validation error
-  // TODO: Navigate
 
 }

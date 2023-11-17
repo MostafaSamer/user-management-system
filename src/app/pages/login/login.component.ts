@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
         }
       },
       (error) => {
-        console.error('An error occurred during login:', error);
+        console.error('An error occurred during login: ', error);
         this.errorMessage = 'An unexpected error occurred.';
       }
     );

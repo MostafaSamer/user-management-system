@@ -1,0 +1,14 @@
+@import '/src/assets/styles/colors';
+
+.cta-btn {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}

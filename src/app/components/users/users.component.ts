@@ -18,4 +18,11 @@ export class UsersComponent implements OnInit {
     this.userServices.getUsers().subscribe((users) => this.users = users)
   }
 
+  editUser(user: User) {
+    console.log("Navigate to edit user page with this user id: ", user.id)
+  }
+  deleteUser(user: User) {
+    console.log("Navigate to delete user page with this user id: ", user.id)
+  }
+
 }
