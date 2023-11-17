@@ -24,8 +24,15 @@ export class AuthService {
     }
   }
   
-  getLoggedInUser(): User | null {
-    return this.loggedInUser;
+  getLoggedInUser(): User {
+    return {
+      id: 99,
+      name: "Mostafa",
+      email: "mostafasamer1999@hotmail.com",
+      role: 1,
+      username: "mostafasamer"
+    }
+    // return this.loggedInUser;
   }
 
   logout() {
