@@ -5,5 +5,17 @@
   "DELETE_USER_TITLE": "Delete User",
   "DELETE_USER_TEXT": "Are you sure you want to delete '{{ username }}'?",
   "CANCEL": "Cancel",
-  "DELETE": "Delete"
+  "DELETE": "Delete",
+  "EDIT": "Edit",
+  "USERNAME": "Username",
+  "EMAIL": "Email",
+  "NAME": "Name",
+  "ROLE": "Role",
+  "ADD_USER": "Add User",
+  "ADD_NEW_USER": "Add New User",
+  "USER": "User",
+  "ADMIN": "Admin",
+  "EDIT_NEW_USER": "Edit New User",
+  "EDIT_USER": "Edit User",
+  "VIEW_AS": "View as"
 }

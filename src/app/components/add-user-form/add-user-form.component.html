@@ -1,28 +1,28 @@
 <div class="container">
     <div class="form-container">
         <div class="add-user-form">
-            <h2>Add New User</h2>
+            <h2>{{ 'ADD_NEW_USER' | translate }}</h2>
             <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
-                    <label for="username">Username:</label>
+                    <label for="username">{{ 'USERNAME' | translate }}:</label>
                     <input type="text" id="username" name="username" formControlName="username" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email:</label>
+                    <label for="email">{{ 'EMAIL' | translate }}:</label>
                     <input type="email" id="email" name="email" formControlName="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="name">Name:</label>
+                    <label for="name">{{ 'NAME' | translate }}:</label>
                     <input type="text" id="name" name="name" formControlName="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="role">Role:</label>
+                    <label for="role">{{ 'ROLE' | translate }}:</label>
                     <select id="role" name="role" formControlName="role" required>
-                        <option value="1">User</option>
-                        <option value="0">Admin</option>
+                        <option value="1">{{ 'USER' | translate }}</option>
+                        <option value="0">{{ 'ADMIN' | translate }}</option>
                     </select>
                 </div>
-                <button type="submit">Add User</button>
+                <button type="submit">{{ 'ADD_USER' | translate }}</button>
             </form>
         </div>
     </div>

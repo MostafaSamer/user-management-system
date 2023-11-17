@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Inject, Input, Output } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { User } from 'src/app/interfaces/User';
+import { LocalizationService } from 'src/app/services/localization.service';
 
 @Component({
   selector: 'app-delete-user-modal',
@@ -10,6 +11,11 @@ import { User } from 'src/app/interfaces/User';
 export class DeleteUserModalComponent {
   constructor(
     public dialogRef: MatDialogRef<DeleteUserModalComponent>,
-    @Inject(MAT_DIALOG_DATA) public user: User
+    @Inject(MAT_DIALOG_DATA) public user: User,
+    private localizationService: LocalizationService
   ) {}
+
+  getCurrentLanguage() {
+    return this.localizationService.getCurrentLanguage()
+  }
 }

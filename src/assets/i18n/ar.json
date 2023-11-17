@@ -1,5 +1,22 @@
 {
-    "HOME": "الرئيسية",
+    "HOME": "الصفحة الرئيسية",
     "LOGOUT": "تسجيل الخروج",
-    "SWITCH_LANAGUAGE": "تغير اللغه"
-}
+    "SWITCH_LANAGUAGE": "تغيير اللغة",
+    "DELETE_USER_TITLE": "حذف المستخدم",
+    "DELETE_USER_TEXT": "هل أنت متأكد أنك تريد حذف '{{ username }}'؟",
+    "CANCEL": "إلغاء",
+    "DELETE": "حذف",
+    "EDIT": "تحرير",
+    "USERNAME": "اسم المستخدم",
+    "EMAIL": "البريد الإلكتروني",
+    "NAME": "الاسم",
+    "ROLE": "الدور",
+    "ADD_USER": "إضافة مستخدم",
+    "ADD_NEW_USER": "إضافة مستخدم جديد",
+    "USER": "مستخدم",
+    "ADMIN": "مدير",
+    "EDIT_NEW_USER": "تحرير مستخدم جديد",
+    "EDIT_USER": "تحرير المستخدم",
+    "VIEW_AS": "عرض كـ"
+  }
+  

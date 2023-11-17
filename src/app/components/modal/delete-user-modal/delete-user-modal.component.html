@@ -1,6 +1,6 @@
 <h2 mat-dialog-title>{{ 'DELETE_USER_TITLE' | translate }}</h2>
 <mat-dialog-content>
-    <p>{{ 'DELETE_USER_TEXT' | translate: { username: user.username } }}</p>
+    <p  [dir]="getCurrentLanguage() === 'ar' ? 'rtl' : 'ltr'">{{ 'DELETE_USER_TEXT' | translate: { username: user.username } }}</p>
 </mat-dialog-content>
 <mat-dialog-actions>
     <button mat-button [mat-dialog-close]="false">{{ 'CANCEL' | translate }}</button>
