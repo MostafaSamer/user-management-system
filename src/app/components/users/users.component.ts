@@ -23,7 +23,7 @@ export class UsersComponent implements OnInit {
     this.userService.getUsers().subscribe((users) => this.users = users)
   }
 
-  ViewAs(user: User) {
+  viewAs(user: User) {
     this.router.navigate(['/view-as', user.id])
   }
 

@@ -5,9 +5,9 @@
         <div><strong>{{ 'NAME' | translate }}:</strong> {{ user.name }}</div>
         <div><strong>{{ 'ROLE' | translate }}:</strong> {{ user.role === 1 ? 'User' : 'Admin' }}</div>
         <div class="user-options">
-            <button (click)="ViewAs(user)">{{ 'VIEW_AS' | translate }}</button>
-            <button (click)="editUser(user)">{{ 'EDIT' | translate }}</button>
-            <button (click)="confirmDeleteUser(user)">{{ 'DELETE' | translate }}</button>
+            <app-cta-button text="{{ 'VIEW_AS' | translate }}" (onClickEvent)="viewAs(user)"></app-cta-button>
+            <app-cta-button text="{{ 'EDIT' | translate }}" (onClickEvent)="editUser(user)"></app-cta-button>
+            <app-cta-button text="{{ 'DELETE' | translate }}" (onClickEvent)="confirmDeleteUser(user)"></app-cta-button>
         </div>
     </div>
 </div>
