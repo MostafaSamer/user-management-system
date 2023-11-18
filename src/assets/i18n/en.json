@@ -17,5 +17,9 @@
   "ADMIN": "Admin",
   "EDIT_NEW_USER": "Edit New User",
   "EDIT_USER": "Edit User",
-  "VIEW_AS": "View as"
+  "VIEW_AS": "View as",
+  "USERNAME_REQUIRED": "Username is required.",
+  "EMAIL_REQUIRED": "Email is required.",
+  "NAME_REQUIRED": "Name is required.",
+  "ROLE_REQUIRED": "Role is required."
 }

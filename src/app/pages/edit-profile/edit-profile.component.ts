@@ -11,12 +11,13 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class EditProfileComponent {
   user!: User;
+  errorMessage: string | null = null;
 
   constructor(
     private authService: AuthService,
     private userService: UserService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.fetchUserData();
@@ -24,7 +25,7 @@ export class EditProfileComponent {
 
   fetchUserData() {
     const user = this.authService.getLoggedInUser();
-    if(user) this.user = user;
+    if (user) this.user = user;
     else this.router.navigate(['/']);
   }
 
@@ -35,13 +36,14 @@ export class EditProfileComponent {
           (user) => this.router.navigate(['/']),
           (error) => {
             console.error('An error occurred during adding user: ', error);
-            // this.errorMessage = 'An unexpected error occurred.';
+            this.errorMessage = 'An unexpected error occurred.';
           }
         );
     } else {
+      this.errorMessage = 'An unexpected error occurred.';
       console.error('User or user ID is undefined.');
       // Handle the case where user or user ID is undefined
     }
   }
-  
+
 }

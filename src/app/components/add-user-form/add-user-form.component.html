@@ -6,14 +6,26 @@
                 <div class="form-group">
                     <label for="username">{{ 'USERNAME' | translate }}:</label>
                     <input type="text" id="username" name="username" formControlName="username" required>
+                    <div *ngIf="addUserForm.get('username')?.hasError('required') && addUserForm.get('username')?.touched"
+                        class="error-message">
+                        {{ 'USERNAME_REQUIRED' | translate }}
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="email">{{ 'EMAIL' | translate }}:</label>
                     <input type="email" id="email" name="email" formControlName="email" required>
+                    <div *ngIf="addUserForm.get('email')?.hasError('required') && addUserForm.get('email')?.touched"
+                        class="error-message">
+                        {{ 'EMAIL_REQUIRED' | translate }}
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="name">{{ 'NAME' | translate }}:</label>
                     <input type="text" id="name" name="name" formControlName="name" required>
+                    <div *ngIf="addUserForm.get('name')?.hasError('required') && addUserForm.get('name')?.touched"
+                        class="error-message">
+                        {{ 'NAME_REQUIRED' | translate }}
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="role">{{ 'ROLE' | translate }}:</label>
@@ -21,6 +33,10 @@
                         <option value="1">{{ 'USER' | translate }}</option>
                         <option value="0">{{ 'ADMIN' | translate }}</option>
                     </select>
+                    <div *ngIf="addUserForm.get('role')?.hasError('required') && addUserForm.get('role')?.touched"
+                        class="error-message">
+                        {{ 'ROLE_REQUIRED' | translate }}
+                    </div>
                 </div>
                 <button type="submit">{{ 'ADD_USER' | translate }}</button>
             </form>

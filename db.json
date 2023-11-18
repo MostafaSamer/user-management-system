@@ -1,12 +1,11 @@
 {
   "users": [
     {
-      "id": 1,
       "username": "admin",
-      "name": "Mostafa Samir",
       "email": "admin@email.com",
-      "password": "1234",
-      "role": 0
+      "name": "Mostafa Samir",
+      "role": "0",
+      "id": 1
     },
     {
       "username": "addfs--",
@@ -16,18 +15,11 @@
       "id": 3
     },
     {
-      "username": "shockwave",
+      "username": "ss",
       "email": "hojimeg111@geekjun.com",
       "name": "Mostafa Samir",
       "role": "1",
       "id": 4
-    },
-    {
-      "username": "shockwave2",
-      "email": "hojimeg111@geekjun.com",
-      "name": "Mostafa Samir",
-      "role": "1",
-      "id": 5
     },
     {
       "username": "user11",
@@ -35,6 +27,20 @@
       "name": "Mostafa Samir",
       "role": "1",
       "id": 6
+    },
+    {
+      "username": "",
+      "email": "",
+      "name": "",
+      "role": "",
+      "id": 7
+    },
+    {
+      "username": "",
+      "email": "",
+      "name": "",
+      "role": "1",
+      "id": 8
     }
   ]
 }

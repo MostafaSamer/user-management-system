@@ -13,8 +13,7 @@ export class AddUserFormComponent {
   @Output() onAddUser = new EventEmitter<User>();
 
   constructor(
-    private fb: FormBuilder,
-    private router: Router
+    private fb: FormBuilder
   ) {
     this.addUserForm = this.fb.group({
       username: ['', Validators.required],
@@ -25,6 +24,7 @@ export class AddUserFormComponent {
   }
 
   onSubmit() {
+    if (this.addUserForm?.invalid) return;
     this.onAddUser.emit(this.addUserForm.value);
   }
 

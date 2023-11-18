@@ -1,2 +1,5 @@
 <app-header></app-header>
+<div *ngIf="errorMessage" class="global-error">
+    <span>{{ errorMessage }}</span>
+</div>
 <app-edit-user-form [user]="user" (onEditUser)="editUser($event)"></app-edit-user-form>

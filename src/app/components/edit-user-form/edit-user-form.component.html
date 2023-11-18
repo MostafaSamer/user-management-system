@@ -6,14 +6,26 @@
                 <div class="form-group">
                     <label for="username">{{ 'USERNAME' | translate }}:</label>
                     <input type="text" id="username" name="username" formControlName="username" required>
+                    <div *ngIf="editUserForm.get('username')?.hasError('required') && editUserForm.get('username')?.touched"
+                        class="error-message">
+                        {{ 'USERNAME_REQUIRED' | translate }}
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="email">{{ 'EMAIL' | translate }}:</label>
                     <input type="email" id="email" name="email" formControlName="email" required>
+                    <div *ngIf="editUserForm.get('email')?.hasError('required') && editUserForm.get('email')?.touched"
+                        class="error-message">
+                        {{ 'EMAIL_REQUIRED' | translate }}
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="name">{{ 'NAME' | translate }}:</label>
                     <input type="text" id="name" name="name" formControlName="name" required>
+                    <div *ngIf="editUserForm.get('name')?.hasError('required') && editUserForm.get('name')?.touched"
+                        class="error-message">
+                        {{ 'NAME_REQUIRED' | translate }}
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="role">{{ 'ROLE' | translate }}:</label>
@@ -21,6 +33,10 @@
                         <option value="1">{{ 'USER' | translate }}</option>
                         <option value="0">{{ 'ADMIN' | translate }}</option>
                     </select>
+                    <div *ngIf="editUserForm.get('role')?.hasError('required') && editUserForm.get('role')?.touched"
+                        class="error-message">
+                        {{ 'ROLE_REQUIRED' | translate }}
+                    </div>
                 </div>
                 <button type="submit">{{ 'EDIT_USER' | translate }}</button>
             </form>

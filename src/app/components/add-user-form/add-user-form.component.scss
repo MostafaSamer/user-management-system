@@ -41,7 +41,6 @@ input {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
-  margin-bottom: 10px;
 }
 
 button {
@@ -56,4 +55,10 @@ button {
 
 button:hover {
   background-color: #45a049;
+}
+
+div.error-message {
+  color: $error-color;
+  font-size: 14px;
+  margin-top: 5px;
 }

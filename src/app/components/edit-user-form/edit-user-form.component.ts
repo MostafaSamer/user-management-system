@@ -35,6 +35,7 @@ export class EditUserFormComponent implements OnInit {
   }
 
   onSubmit() {
+    if (this.editUserForm?.invalid) return;
     this.onEditUser.emit(this.editUserForm.value);
   }
 }
