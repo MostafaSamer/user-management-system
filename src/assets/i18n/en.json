@@ -21,5 +21,7 @@
   "USERNAME_REQUIRED": "Username is required.",
   "EMAIL_REQUIRED": "Email is required.",
   "NAME_REQUIRED": "Name is required.",
-  "ROLE_REQUIRED": "Role is required."
+  "ROLE_REQUIRED": "Role is required.",
+  "NOT_FOUND_TITLE": "404 - Not Found",
+  "NOT_FOUND_TEXT": "The page you are looking for might be under construction or does not exist."
 }

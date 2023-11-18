@@ -21,5 +21,8 @@
   "USERNAME_REQUIRED": "اسم المستخدم مطلوب.",
   "EMAIL_REQUIRED": "البريد الإلكتروني مطلوب.",
   "NAME_REQUIRED": "الاسم مطلوب.",
-  "ROLE_REQUIRED": "الدور مطلوب."
+  "ROLE_REQUIRED": "الدور مطلوب.",
+  "NOT_FOUND_TITLE": "404 - غير موجود",
+  "NOT_FOUND_TEXT": "الصفحة التي تبحث عنها قد تكون قيد الإنشاء أو غير موجودة."
+
 }

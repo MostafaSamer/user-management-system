@@ -25,3 +25,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Create a form component and make it generate forms from json to all create all forms
 
 - Also we can split the components folder to `macro` and `micro` to manage big component like formes and header from small components like buttons and badges
+
+- Add request and responde interceptors to handle tokens and handle errors from API and redirect to 500 page

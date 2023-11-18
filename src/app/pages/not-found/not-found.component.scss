@@ -1,0 +1,14 @@
+@import '/src/assets/styles/colors';
+
+.not-found-container {
+    text-align: center;
+    margin: 50px;
+}
+
+h1 {
+    color: $primary-color;
+}
+
+p {
+    color: $secondary-color;
+}
