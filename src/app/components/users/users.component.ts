@@ -4,6 +4,7 @@ import { UserService } from 'src/app/services/user.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteUserModalComponent } from '../modal/delete-user-modal/delete-user-modal.component';
 import { Router } from '@angular/router';
+import { LoadingService } from 'src/app/services/loading.service';
 
 @Component({
   selector: 'app-users',
@@ -16,11 +17,16 @@ export class UsersComponent implements OnInit {
   constructor(
     private userService: UserService,
     private dialog: MatDialog,
-    private router: Router
+    private router: Router,
+    public loadingService: LoadingService,
   ) {}
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe((users) => this.users = users)
+    this.loadingService.showLoading();
+    this.userService.getUsers().subscribe((users) => {
+      this.users = users;
+      this.loadingService.hideLoading();
+    })
   }
 
   viewAs(user: User) {

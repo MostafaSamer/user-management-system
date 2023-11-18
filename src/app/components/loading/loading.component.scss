@@ -1,0 +1,23 @@
+@import '/src/assets/styles/colors';
+
+.loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+  }
+  
+  .spinner {
+    border: 4px solid $primary-color; /* Use the primary color for the spinner */
+    border-top: 4px solid $background-color; /* Use the background color for the spinner top border */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
