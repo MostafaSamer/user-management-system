@@ -1,9 +1,9 @@
 <div class="user-list">
     <div class="user-card">
-        <div><strong>{{ 'USERNAME' | translate }}:</strong> {{ user?.username }}</div>
-        <div><strong>{{ 'EMAIL' | translate }}:</strong> {{ user?.email }}</div>
-        <div><strong>{{ 'NAME' | translate }}:</strong> {{ user?.name }}</div>
-        <div><strong>{{ 'ROLE' | translate }}:</strong> {{ user?.role === 1 ? 'User' : 'Admin' }}</div>
+        <div><strong>{{ 'USERNAME' | translate }}:</strong> {{ user.username }}</div>
+        <div><strong>{{ 'EMAIL' | translate }}:</strong> {{ user.email }}</div>
+        <div><strong>{{ 'NAME' | translate }}:</strong> {{ user.name }}</div>
+        <div><strong>{{ 'ROLE' | translate }}:</strong> {{ user.role === 1 ? 'User' : 'Admin' }}</div>
         <div class="user-options">
             <button (click)="editUser()">{{ 'EDIT' | translate }}</button>
         </div>

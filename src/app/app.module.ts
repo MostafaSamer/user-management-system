@@ -24,6 +24,7 @@ import { EditUserFormComponent } from './components/edit-user-form/edit-user-for
 import { EditUserComponent } from './pages/edit-user/edit-user.component';
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 import { ViewAsUserComponent } from './pages/view-as-user/view-as-user.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -45,7 +46,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     EditUserFormComponent,
     EditUserComponent,
     EditProfileComponent,
-    ViewAsUserComponent
+    ViewAsUserComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
