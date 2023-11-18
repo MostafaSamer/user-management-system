@@ -33,12 +33,14 @@ export class UserHomeComponent implements OnInit {
         }
       );
     } else {
-      this.user = this.authService.getLoggedInUser();
+      const user = this.authService.getLoggedInUser();
+      if(user) this.user = user;
+      else this.router.navigate(['/']);
     }
   }
 
   editUser() {
-    this.viewAs ? this.router.navigate(['/edit-user', this.user.id]) :
+    this.viewAs ? this.router.navigate(['/edit-user', this.user?.id]) :
     this.router.navigate(['/edit-profile']);
   }
 }

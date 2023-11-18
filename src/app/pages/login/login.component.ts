@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    // Check if the user is already logged in when the component initializes
     if (this.authService.getLoggedInUser()) {
       this.router.navigate(['/']);
     }

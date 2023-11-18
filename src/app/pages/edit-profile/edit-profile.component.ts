@@ -23,7 +23,9 @@ export class EditProfileComponent {
   }
 
   fetchUserData() {
-    this.user = this.authService.getLoggedInUser()
+    const user = this.authService.getLoggedInUser();
+    if(user) this.user = user;
+    else this.router.navigate(['/']);
   }
 
   editUser(user: User) {
